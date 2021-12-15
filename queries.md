@@ -29,6 +29,11 @@ SELECT *
 FROM `students` 
 WHERE `date_of_birth`< '1991-12-15';
 
+//fatto bene
+SELECT * 
+FROM `students` 
+WHERE TIMESTAMPDIFF(YEAR, `date_of_birth`, NOW()) > 30
+
 4)
 SELECT * 
 FROM `courses` 
