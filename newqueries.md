@@ -85,4 +85,14 @@ QUERY CON JOIN
     ORDER BY `degrees`.`id` ASC;
 
 6)
+    SELECT DISTINCT `teachers`.`*`,
+    `departments`.`name` AS `department_name`
+    FROM `teachers`
+    JOIN `course_teacher` ON `teachers`.`id` = `teacher_id`
+    JOIN `courses` ON `course_id` = `courses`.`id`
+    JOIN `degrees` ON `degree_id` = `degrees`.`id`
+    JOIN `departments` ON `department_id` = `departments`.`id`
+    WHERE `departments`.`name` = 'Dipartimento di Matematica';
 
+7)
+    
