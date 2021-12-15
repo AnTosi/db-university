@@ -75,4 +75,14 @@ QUERY CON JOIN
     ORDER BY `student_surname` ASC, `student_name` ASC;
 
 5)
+    SELECT `degrees`.`name` AS `degree`,
+    `courses`.`name` AS `course` , 
+    CONCAT(`teachers`.`name`, ' ', `teachers`.`surname`) AS `teacher`
+    FROM `degrees`
+    JOIN `courses` ON `degrees`.`id` = `degree_id`
+    JOIN `course_teacher` ON `courses`.`id` = `course_id`
+    JOIN `teachers` ON `teacher_id` = `teachers`.`id`
+    ORDER BY `degrees`.`id` ASC;
+
+6)
 
